@@ -2,8 +2,9 @@ import Pokecard from '../Pokecard/Pokecard'
 
 const Pokedex = () => {
     return ( 
-        <div class="Pokedex">
+        <div className="Pokedex">
             Hello Pokedex
+            <Pokecard />
         </div>
      );
 }
