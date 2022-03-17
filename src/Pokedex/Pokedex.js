@@ -1,4 +1,5 @@
 import Pokecard from "../Pokecard/Pokecard";
+import './pokedex.css'
 
 const Pokedex = ({card1, card2, card3, card4}) => {
 
