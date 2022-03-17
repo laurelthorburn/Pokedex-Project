@@ -1,3 +1,5 @@
+import './pokecard.css'
+
 const Pokecard = () => {
   const pokemonArray = [
     { id: 4, name: "Charmander", type: "fire", base_experience: 62 },
