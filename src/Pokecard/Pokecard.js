@@ -1,4 +1,4 @@
-import './pokecard.css'
+import "./pokecard.css";
 
 const Pokecard = () => {
   const pokemonArray = [
@@ -12,6 +12,16 @@ const Pokecard = () => {
     { id: 133, name: "Eevee", type: "normal", base_experience: 65 },
   ];
 
+  //TODO: use fancier images
+  function niceImage(i) {
+    if (i < 99 && i > 9) {
+      i = "0" + i;
+    } else if (i < 10) {
+      i = "00" + i;
+    } // add zero in front of numbers < 99
+    return i;
+  }
+
   return (
     <div className="Pokecard">
       {pokemonArray.map((pokemon) => {
@@ -19,7 +29,9 @@ const Pokecard = () => {
           <div key={pokemon.id} className="Pokecard-card">
             <div className="Pokecard-name">{pokemon.name}</div>
             <img
-              src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png`}
+              src={`https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${niceImage(
+                pokemon.id
+              )}.png`}
               alt={pokemon.name}
             />
             <div className="Pokecard-type">{pokemon.type}</div>
