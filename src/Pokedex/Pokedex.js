@@ -5,6 +5,9 @@ const Pokedex = () => {
         <div className="Pokedex">
             Hello Pokedex
             <Pokecard />
+            <Pokecard />
+            <Pokecard />
+            <Pokecard />
         </div>
      );
 }
