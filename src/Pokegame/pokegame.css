@@ -1,11 +1,17 @@
 .Pokegame-winner{
 color: green;
 font-size: larger;
-text-transform: uppercase;
+text-transform: capitalize;
+padding: 15px 0px;
 }
 
 .Pokegame-loser{
 color:red;
 font-size: larger;
-text-transform: uppercase;
+text-transform: capitalize;
+padding: 15px 0px;
+}
+
+.Pokegame-score{
+    padding-bottom: 15px;
 }

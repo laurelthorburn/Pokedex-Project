@@ -42,11 +42,11 @@ const Pokegame = () => {
     setPlay1Score(playerOne);
     setPlay2Score(playerTwo);
     if (playerOne > playerTwo) {
-      setPlayer1("Winner");
-      setPlayer2("Loser");
+      setPlayer1("Winning Hand");
+      setPlayer2("Losing Hand");
     } else if (playerOne < playerTwo) {
-      setPlayer1("Loser");
-      setPlayer2("Winner");
+      setPlayer1("Losing Hand");
+      setPlayer2("Winning Hand");
     } else if (playerOne === playerTwo) {
       setPlayer1("Draw");
       setPlayer2("Draw");
@@ -55,12 +55,12 @@ const Pokegame = () => {
 
   return (
     <div className="Pokegame">
-      <div className={`${player1 === "Winner" ? "Pokegame-winner" : "Pokegame-loser"}`}>{player1}</div>
-      <div className="Pokegame-score">{player1Score}</div>
+      <div className={`${player1 === "Winning Hand" ? "Pokegame-winner" : "Pokegame-loser"}`}>{player1}</div>
+      <div className="Pokegame-score">Total experience: {player1Score}</div>
 
       <Pokedex card1={card1} card2={card2} card3={card3} card4={card4} />
-      <div className={`${player2 === "Winner" ? "Pokegame-winner" : "Pokegame-loser"}`}>{player2}</div>
-      <div className="Pokegame-score">{player2Score}</div>
+      <div className={`${player2 === "Winning Hand" ? "Pokegame-winner" : "Pokegame-loser"}`}>{player2}</div>
+      <div className="Pokegame-score">Total experience: {player2Score}</div>
 
       <Pokedex card1={card5} card2={card6} card3={card7} card4={card8} />
     </div>
