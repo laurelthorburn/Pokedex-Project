@@ -1,16 +1,4 @@
-/* .Pokecard{
-    background-color: blueviolet;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-}
-.Pokecard-card{
-    background-color: lightgray;
-    border: black solid 1px;
-    border-radius: 10px;
-    width: 150px;
-}
-*/
+
 
 .Pokecard-img{
     width: 75px;

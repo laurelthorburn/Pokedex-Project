@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import Pokegame from './Pokegame/Pokegame'
 
