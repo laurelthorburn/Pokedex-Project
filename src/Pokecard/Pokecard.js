@@ -14,6 +14,7 @@ const Pokecard = ({ pokemon }) => {
   return (
     <div className="Pokecard">
       <div key={pokemon.id} className="Pokecard-card">
+        <div className="img-hover-zoom">
         <img
           src={`https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${niceImage(
             pokemon.id
@@ -21,6 +22,7 @@ const Pokecard = ({ pokemon }) => {
           alt={pokemon.name}
           className="Pokecard-img"
         />
+        </div>
         <div className="Pokecard-name">{pokemon.name}</div>
         <div className="Pokecard-type">Type: {pokemon.type}</div>
         <div className="Pokecard-exp" base_exp={pokemon.base_experience}>
