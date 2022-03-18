@@ -1,6 +1,6 @@
 import "./pokecard.css";
 
-const Pokecard = ({pokemon}) => {
+const Pokecard = ({ pokemon }) => {
   //TODO: use fancier images
   function niceImage(i) {
     if (i < 99 && i > 9) {
@@ -13,19 +13,20 @@ const Pokecard = ({pokemon}) => {
 
   return (
     <div className="Pokecard">
-          <div key={pokemon.id} className="Pokecard-card">
-            <div className="Pokecard-name">{pokemon.name}</div>
-            <img
-              src={`https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${niceImage(
-                pokemon.id
-              )}.png`}
-              alt={pokemon.name}
-              className="Pokecard-img"
-            />
-            <div className="Pokecard-type">{pokemon.type}</div>
-            <div className="Pokecard-exp" base_exp={pokemon.base_experience}>{pokemon.base_experience}</div>
-          </div>
-      
+      <div key={pokemon.id} className="Pokecard-card">
+        <img
+          src={`https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${niceImage(
+            pokemon.id
+          )}.png`}
+          alt={pokemon.name}
+          className="Pokecard-img"
+        />
+        <div className="Pokecard-name">{pokemon.name}</div>
+        <div className="Pokecard-type">Type: {pokemon.type}</div>
+        <div className="Pokecard-exp" base_exp={pokemon.base_experience}>
+          EXP: {pokemon.base_experience}
+        </div>
+      </div>
     </div>
   );
 };

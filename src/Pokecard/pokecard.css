@@ -1,5 +1,24 @@
+.Pokecard{
+    background-color: white;
+    margin: 0px 50px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.418);}
 
+.Pokecard-name{
+font-size: medium;
+font-weight: 500;
+margin-bottom: 8px;
+}
+
+.Pokecard-type{
+    font-size: small;
+}
+.Pokecard-exp{
+    font-size: small;
+}
 
 .Pokecard-img{
-    width: 75px;
+    width: 150px;
+    background-color: lightgray;
+    margin: 5px;
+    padding: 5px 20px;
 } 
