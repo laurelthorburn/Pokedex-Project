@@ -2,6 +2,8 @@ import Pokedex from "../Pokedex/Pokedex";
 import React, { useState, useEffect } from "react";
 import './pokegame.css'
 
+//TODO: Delete item from array, no repeat cards
+
 const Pokegame = () => {
   const pokemonArray = [
     { id: 4, name: "Charmander", type: "fire", base_experience: 62 },
@@ -14,14 +16,14 @@ const Pokegame = () => {
     { id: 133, name: "Eevee", type: "normal", base_experience: 65 },
   ];
 
-  const card1 = pokemonArray[Math.floor(Math.random() * 8)];
-  const card2 = pokemonArray[Math.floor(Math.random() * 8)];
-  const card3 = pokemonArray[Math.floor(Math.random() * 8)];
-  const card4 = pokemonArray[Math.floor(Math.random() * 8)];
-  const card5 = pokemonArray[Math.floor(Math.random() * 8)];
-  const card6 = pokemonArray[Math.floor(Math.random() * 8)];
-  const card7 = pokemonArray[Math.floor(Math.random() * 8)];
-  const card8 = pokemonArray[Math.floor(Math.random() * 8)];
+// function remove(items, item) {
+//   for (let i=0; i< items.length; i++){
+//     if (items[i] === item) {
+//       return [ ...items.slice(0,i), ...items.slice(i +1)];
+//     }
+//   }
+// }
+
 
   const [player1, setPlayer1] = useState("");
   const [player2, setPlayer2] = useState("");
@@ -52,6 +54,15 @@ const Pokegame = () => {
       setPlayer2("Draw");
     }
   }, []);
+
+  const card1 = pokemonArray[Math.floor(Math.random() * 8)];
+  const card2 = pokemonArray[Math.floor(Math.random() * 8)];
+  const card3 = pokemonArray[Math.floor(Math.random() * 8)];
+  const card4 = pokemonArray[Math.floor(Math.random() * 8)];
+  const card5 = pokemonArray[Math.floor(Math.random() * 8)];
+  const card6 = pokemonArray[Math.floor(Math.random() * 8)];
+  const card7 = pokemonArray[Math.floor(Math.random() * 8)];
+  const card8 = pokemonArray[Math.floor(Math.random() * 8)];
 
   return (
     <div className="Pokegame">
