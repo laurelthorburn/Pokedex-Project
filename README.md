@@ -1,4 +1,4 @@
-# Shopify-Task
+# Pokedex-Project
 
 <a name="descsection"></a>
 ## Description
