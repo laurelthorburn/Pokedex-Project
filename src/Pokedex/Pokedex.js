@@ -1,14 +1,14 @@
 import Pokecard from "../Pokecard/Pokecard";
 import './pokedex.css'
 
-const Pokedex = ({card1, card2, card3, card4}) => {
+const Pokedex = ({pokemon}) => {
 
   return (
     <div className="Pokedex">
-        <Pokecard pokemon={card1} />
-        <Pokecard pokemon={card2} />
-        <Pokecard pokemon={card3} />
-        <Pokecard pokemon={card4} />
+        <Pokecard pokemon={pokemon[0]} />
+        <Pokecard pokemon={pokemon[1]} />
+        <Pokecard pokemon={pokemon[2]} />
+        <Pokecard pokemon={pokemon[3]} />
       </div>
   );
 };

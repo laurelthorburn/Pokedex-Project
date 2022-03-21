@@ -32,15 +32,15 @@ const Pokegame = () => {
 
   useEffect(() => {
     const playerOne =
-      card1.base_experience +
-      card2.base_experience +
-      card3.base_experience +
-      card4.base_experience;
+      hand1[0].base_experience +
+      hand1[1].base_experience +
+      hand1[2].base_experience +
+      hand1[3].base_experience ;
     const playerTwo =
-      card5.base_experience +
-      card6.base_experience +
-      card7.base_experience +
-      card8.base_experience;
+    hand2[0].base_experience +
+    hand2[1].base_experience +
+    hand2[2].base_experience +
+    hand2[3].base_experience ;
     setPlay1Score(playerOne);
     setPlay2Score(playerTwo);
     if (playerOne > playerTwo) {
@@ -55,25 +55,26 @@ const Pokegame = () => {
     }
   }, []);
 
-  const card1 = pokemonArray[Math.floor(Math.random() * 8)];
-  const card2 = pokemonArray[Math.floor(Math.random() * 8)];
-  const card3 = pokemonArray[Math.floor(Math.random() * 8)];
-  const card4 = pokemonArray[Math.floor(Math.random() * 8)];
-  const card5 = pokemonArray[Math.floor(Math.random() * 8)];
-  const card6 = pokemonArray[Math.floor(Math.random() * 8)];
-  const card7 = pokemonArray[Math.floor(Math.random() * 8)];
-  const card8 = pokemonArray[Math.floor(Math.random() * 8)];
+let hand1 = [];
+let hand2 =[...pokemonArray];
+
+while(hand1.length < hand2.length){
+  //TODO: create a random index and then slice from hand2
+  let randIndex = Math.floor(Math.random() * hand2.length);
+  let randomPokemon = hand2.splice(randIndex, 1)[0];
+  hand1.push(randomPokemon);
+}
 
   return (
     <div className="Pokegame">
       <div className={`${player1 === "Winning Hand" ? "Pokegame-winner" : "Pokegame-loser"}`}>{player1}</div>
       <div className="Pokegame-score">Total experience: {player1Score}</div>
 
-      <Pokedex card1={card1} card2={card2} card3={card3} card4={card4} />
+      <Pokedex pokemon={hand1} />
       <div className={`${player2 === "Winning Hand" ? "Pokegame-winner" : "Pokegame-loser"}`}>{player2}</div>
       <div className="Pokegame-score">Total experience: {player2Score}</div>
 
-      <Pokedex card1={card5} card2={card6} card3={card7} card4={card8} />
+      <Pokedex pokemon={hand2} />
     </div>
   );
 };
