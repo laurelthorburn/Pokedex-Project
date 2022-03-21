@@ -5,8 +5,9 @@
 
 I want to be the very best... at react.  Bad joke? I have more.
 
-The purpose of this project was to utilize React props to complete the following tasks:* The App should render a single Pokegame
-* Pokegame should take a list of 8 pokemon an randomly assign them into two hands of 4 cards each (repeats ok for now)
+The purpose of this project was to utilize React props to complete the following tasks:
+* The App should render a single Pokegame
+* Pokegame should take a list of 8 pokemon and randomly assign them into two hands of 4 cards each (no repeats)
 * Pokegame should calculate the the total experience for each hand and declare a winner/loser
 * Pokecard should display the pokemon's name, type, image, and base experience
 * The Pokecard image requires a function to push 0's in front of the pokemon id with one or two digits (4 -> 004, 35 -> 035, 109 -> 109)
